@@ -5,33 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="C:\Users\misat\OneDrive\デスクトップ\portfolio\vue-app\src\CSS\test.css">
     <title>横スクロールテンプレート</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+
 </head>
 <body>
-    <div class="container">
-        <div id="scroll">
-            <div>🐱</div>
-            <div>🐶</div>
-            <div>🐱</div>
-            <div>🐶</div>
-            <div>🐱</div>
-            <div>🐶</div>
-            <div>🐱</div>
-            <div>🐶</div>
-            <div>🐱</div>
-            <div>🐶</div>
-            <div>🐱</div>
-            <div>🐶</div>
-            <div>🐱</div>
-            <div>🐶</div>
-            <div>🐱</div>
-            <div>🐶</div>
-            <div>🐱</div>
-            <div>🐶</div>
-            <div>🐱</div>
-            <div>🐶</div>
-          </div>
-    </div>
+    
+    <h1 class="title">GSAP Pinning Side Scroll</h1>
+<section class="normal section">
+  <div class="container">
+    <h2 class="normal-heading heading">普通のセクション</h2>
+    <p class="normal-text">
+      テキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよ
+    </p>
+  </div>
+</section>
 
+<section class="side-scroll section">
+  <div class="side-scroll-container container">
+    <h2 class="side-scroll-heading heading">
+      横にスクロールするセクション
+    </h2>
+    <div class="side-scroll-list-wrapper">
+      <ul class="side-scroll-list">
+        <li class="side-scroll-item">Card</li>
+        <li class="side-scroll-item">Card</li>
+        <li class="side-scroll-item">Card</li>
+        <li class="side-scroll-item">Card</li>
+        <li class="side-scroll-item">Card</li>
+        <li class="side-scroll-item">Card</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="normal section">
+  <div class="container">
+    <h2 class="normal-heading heading">普通のセクション</h2>
+    <p class="normal-text">
+      テキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよテキストが入りますよ
+    </p>
+  </div>
+</section>
+
+       
     <script type="text/javascript" src="C:\Users\misat\OneDrive\デスクトップ\portfolio\vue-app\src\JS\test.js"></script>
 
 </body>
