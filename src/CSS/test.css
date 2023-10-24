@@ -10,10 +10,39 @@
   }
   
   body {
-    background-color: #eeebdd;
-    color: #1b1717;
+    background-color: #000000;
+    color: #ffffff;
     font-family: Avenir, 'Helvetica neue', Helvetica, sans-serif;
+    background-image: url("../assets/background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: 100% auto;
   }
+
+  /* ヘッダー */
+  header{
+    /* position: fixed; */
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 18vh;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.523);
+  }
+
+  /* ヘッダータイトル */
+   .headertitle-img{
+    width: auto;
+    height: 18vh;
+    padding:0px 10px;
+  }
+
+  /* ヘッダーリンク */
+.link{
+    text-align: right;
+    display: inline-block;
+  }
+  
   
   /* 共通 */
   .section {
@@ -26,10 +55,12 @@
     margin: 0 auto;
   }
   
+  /* 作品集のタイトル文字 */
   .heading {
     font-size: 40px;
     font-weight: 700;
     letter-spacing: 0.05em;
+    text-align: center;
   }
   
   /* タイトル */
@@ -48,7 +79,7 @@
   
   /* 横スクロールセクション */
   .side-scroll {
-    background-color: #1b1717;
+    background-color: #1b171780;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,8 +107,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 300px;
-    height: 420px;
+    width: 420px;
+    height: 300px;
     background-color: #eeebdd;
     color: #1b1717;
     font-size: 32px;
