@@ -1,38 +1,86 @@
 /* フォント埋め込み */
-@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+/* 星のエフェクト */
+/* 星空の背景のスタイル */
+.stars {
+  position: relative;
+  width: 100%; /* 星空の横幅 */
+  overflow: hidden; /* 星が枠外にはみ出すのを防ぐ */
+}
+
+/* 星のスタイル */
+.star {
+  /* background-image:url(../assets/star.png);  */
+  position: absolute;
+  display: block;
+  background-color: #ffffff; /*星の色*/
+  border-radius: 50%;
+  box-shadow: 0 0 10px 5px rgba(#fff, 0.5); /*星の影*/
+  opacity: 0;
+  animation: twinkle 5s infinite;
+}
+
+/* 星がキラキラ光るアニメーション */
+@keyframes twinkle {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+/* 星のエフェクトここまで */
 
 /* マウスストーカー */
 
-  svg {
-    display: none;
-  }
-  
-  .Cursor {
-    pointer-events: none;
-    position: fixed;
-    display: block;
-    border-radius: 0;
-    transform-origin: center center;
-    mix-blend-mode: difference;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    filter: url("#goo");
-  }
+svg {
+  display: none;
+}
 
-  .Cursor span {
-    position: absolute;
-    display: block;
-    width: 26px;
-    height: 26px;
-    border-radius: 20px;
-    background-color: #ffff00;
-    transform-origin: center center;
-    transform: translate(-50%, -50%);
-  }
+.Cursor {
+  pointer-events: none;
+  position: fixed;
+  display: block;
+  border-radius: 0;
+  transform-origin: center center;
+  mix-blend-mode: difference;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  filter: url("#goo");
+}
 
+.Cursor span {
+  position: absolute;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 20px;
+  background-color: #ffff00;
+  transform-origin: center center;
+  transform: translate(-50%, -50%);
+}
 
-  /* マウスストーカー ここまで */
+.test-button{
+  text-align: center;
+  width:30%;
+  height:100px
+}
+.test-button a{
+  display: block;
+  background-color: #ffff00;
+}
+
+/* マウスストーカー ここまで */
+
 
 .margin-right-30{
     margin-right: 30px;
@@ -48,7 +96,7 @@
 }
 
 * {
-    cursor: none;
+    /* cursor: none; */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
@@ -65,7 +113,8 @@
   body {
     background-color: #000000;
     color: #ffffff;
-    font-family: 'Mochiy Pop P One', sans-serif;
+    font-family: 'DotGothic16', sans-serif;
+    font-weight: 900;
     background-image: url("../assets/background4.png");
     background-attachment: fixed;
     background-size: cover;
@@ -91,7 +140,7 @@
    .headertitle-img{
     position: relative;
     top: 0px;
-    width: 1200px;
+    width: 100%;
     height: auto;
   }
 
@@ -117,7 +166,7 @@
    .headline-img{
     position: relative;
     top: 40px;
-    width: 280px;
+    width: 30%;
     height: auto;
   }
   
@@ -151,7 +200,7 @@
 
   /* セクションに背景を付けたい */
   .section{
-    background-image: url("../assets/gridLine3.png");
+    background-image: url("../assets/gridLine4.png");
     background-repeat:no-repeat;
     background-size: 85% 95%;
     background-position: center;
@@ -173,9 +222,6 @@
     align-items: center;
   }
   
-  .side-scroll-heading {
-    color: #eeebdd;
-  }
   
   .side-scroll-list-wrapper {
     position: relative;
@@ -191,17 +237,31 @@
     gap: 0 60px;
   }
   
+  /* 横並びの作品の箱 */
   .side-scroll-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 420px;
-    height: 300px;
-    background-color: #eeebdd;
-    color: #1b1717;
+    background-color: none;
+    color: #ffffff;
     font-size: 32px;
     font-weight: 700;
+    background-color: #000000;
+    min-width: 300px;
+    transition: all 0.3s;
   }
+  .side-scroll-item:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+
+  /* 横並び作品画像 */
+  .side-scroll-item img{
+    box-shadow: 0px 0px 25px 5px rgb(255, 255, 255);
+    width:500px;
+    height:auto;
+  }
+
   
   .side-scroll-item + .side-scroll-item {
     margin-left: 60px;

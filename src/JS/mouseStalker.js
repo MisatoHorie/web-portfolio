@@ -141,5 +141,6 @@ const positionCursor = delta => {
   });
 }
 
+
 // 初期化関数を呼び出し、プログラムを開始
 init();
